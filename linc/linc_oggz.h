@@ -10,7 +10,7 @@
 
 namespace linc {
 
-    namespace empty {
+    namespace oggz {
 
         extern int example();
 

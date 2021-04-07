@@ -1,0 +1,3 @@
+[submodule "lib/liboggz"]
+	path = lib/liboggz
+	url = https://github.com/brion/liboggz
