@@ -6,14 +6,8 @@
 #endif
 
 //include other library includes as needed
-// #include "../lib/____"
+#include "../lib/liboggz/include/oggz/oggz.h"
 
 namespace linc {
-
-    namespace oggz {
-
-        extern int example();
-
-    } //empty namespace
-
+    typedef OGGZ OGGZ;
 } //linc

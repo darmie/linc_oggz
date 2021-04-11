@@ -5,18 +5,59 @@
     <files id='haxe'>
 
         <!-- add files and flags to the haxe c++ build -->
-
-        <compilerflag value='-I${LINC_OGGZ_PATH}/linc/'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}test/ogg/include' if="test"/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}linc'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/src/'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/include'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/win32/' if="windows"/>
         <!-- <compilerflag value='-DEMPTY_EXAMPLE_DEFINE_FOR_THE_CPP_CODE'/> -->
 
-        <file name='${LINC_OGGZ_PATH}linc/linc_oggz.cpp' />
+        <!-- <file name='${LINC_OGGZ_PATH}linc/linc_oggz.cpp' /> -->
+
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_comments.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_io.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_read.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_write.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_seek.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_stream.c'/>
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_stream_private.h'/> -->
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_auto.c'/>
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_auto.h'/> -->
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_macros.h'/> -->
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_byteorder.h'/> -->
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_compat.h'/> -->
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_table.c'/>
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_vector.h'/> -->
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_vector.c'/>
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_dlist.h'/> -->
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/oggz_dlist.c'/>
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/metric_internal.c'/>
+        <!-- <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/dirac.h'/> -->
+        <file name='${LINC_OGGZ_PATH}lib/liboggz/src/liboggz/dirac.c'/>
+
+        <file name='${LINC_OGGZ_PATH}test/ogg/src/framing.c' if="test"/>
+        <file name='${LINC_OGGZ_PATH}test/ogg/src/bitwise.c' if="test"/>
+
+
+        <section if="windows">
+             <file name='${LINC_OGGZ_PATH}lib/liboggz/win32/strsep.c'/>
+        </section>
+
 
     </files>
 
+    <files id='__main__'>
+        <compilerflag value='-I${LINC_OGGZ_PATH}linc'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}test/ogg/include' if="test"/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/src/'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/include'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/win32/' if="windows"/>
+    </files>
     <target id="haxe">
-
-        <!-- add linker flags to the haxe build output -->
-
+       
     </target>
 
 </xml>

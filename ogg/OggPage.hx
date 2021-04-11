@@ -1,0 +1,37 @@
+package ogg;
+
+import cpp.Int64;
+import cpp.UInt8;
+
+@:keep
+@:include('ogg/ogg.h')
+@:structAccess
+@:native("ogg_page")
+extern class OggPage {
+    public var header:Array<UInt8>;
+    public var header_len:Int64;
+    public var body:Array<UInt8>;
+    public var body_len:Int64;
+
+    public static inline function init():OggPage {
+      return untyped __cpp__("ogg_page{}");  
+    }
+}
+
+
+@:keep
+@:include('ogg/ogg.h')
+@:structAccess
+@:native("ogg_packet")
+extern class OggPacket {
+  public var packet:cpp.RawPointer<UInt8>;
+  public var bytes:Int64;
+  public var b_o_s:Int64;
+  public var e_o_s:Int64;
+  public var granulepos:Int64;
+  public var packetno:Int64;
+
+  public static inline function init():OggPacket {
+    return untyped __cpp__("ogg_packet{}");  
+  }
+}

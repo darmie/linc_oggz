@@ -1,3 +1,6 @@
 [submodule "lib/liboggz"]
 	path = lib/liboggz
 	url = https://github.com/brion/liboggz
+[submodule "test/ogg"]
+	path = test/ogg
+	url = https://github.com/native-toolkit/ogg
