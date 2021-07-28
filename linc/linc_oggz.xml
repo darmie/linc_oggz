@@ -50,7 +50,7 @@
 
     <files id='__main__'>
         <compilerflag value='-I${LINC_OGGZ_PATH}linc'/>
-        <compilerflag value='-I${LINC_OGGZ_PATH}test/ogg/include' if="test"/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}/lib/ogg/include' if="test"/>
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/'/>
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/src/'/>
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/include'/>
