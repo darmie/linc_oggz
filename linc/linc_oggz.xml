@@ -6,6 +6,7 @@
 
         <!-- add files and flags to the haxe c++ build -->
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/ogg/include'/>
+        <compilerflag value='-I${LINC_OGGZ_PATH}lib/ogg/src/'/>
         <compilerflag value='-I${LINC_OGGZ_PATH}linc'/>
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/'/>
         <compilerflag value='-I${LINC_OGGZ_PATH}lib/liboggz/src/'/>
