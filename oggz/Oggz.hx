@@ -420,7 +420,7 @@ extern enum abstract OggzStreamContent(TOggzStreamContent) {
 
 typedef OggzIOReadWrite = Callable<(user_handle:RawPointer<cpp.Void>, buf:RawPointer<cpp.Void>, n:cpp.SizeT) -> SizeT>;
 typedef OggzIOSeek = Callable<(user_handle:RawPointer<cpp.Void>, offset:Int64, whence:Int) -> Int>;
-typedef OggzIOTell = Callable<(user_handle:RawPointer<cpp.Void>) -> Int>;
+typedef OggzIOTell = Callable<(user_handle:RawPointer<cpp.Void>) -> Int64>;
 typedef OggzIOFlush = Callable<(user_handle:RawPointer<cpp.Void>) -> Int>;
 typedef OggzReadPacket = Callable<(oggz:RawPointer<Oggz>, packet:RawPointer<Packet>, serialno:Long, user_data:RawPointer<cpp.Void>) -> Int>;
 typedef OggzReadPage = Callable<(oggz:RawPointer<Oggz>, page:OggPage, serialno:Int64, user_data:RawPointer<cpp.Void>) -> Int>;
